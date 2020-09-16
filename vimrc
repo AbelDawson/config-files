@@ -85,10 +85,6 @@ let g:deoplete#enable_at_startup = 1
 
 call plug#end()
 
-" Set default theme
-set background=dark
-colo gruvbox
-
 " F2 will open/close file tree of current dir
 map <F2> :NERDTreeToggle<CR>
 
@@ -96,6 +92,7 @@ let g:airline_powerline_fonts = 1
 
 set number
 
+set rnu
 
 " Speed up scrolling in Vim
 set ttyfast
