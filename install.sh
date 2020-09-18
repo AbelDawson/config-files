@@ -7,8 +7,15 @@ sudo snap install discord
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+echo cp config ~/.config/i3
 cp config ~/.config/i3
+echo cp vimrc ~
 cp vimrc ~
+echo mv ~/vimrc ~/.vimrc
 mv ~/vimrc ~/.vimrc
+echo cp bear.jpg ~/Pictures
 cp bear.jpg ~/Pictures
-
+echo cp terminator-config ~/.config/terminator
+cp terminator-config ~/.config/terminator
+echo mv ~/.config/terminator/terminator-config ~/.confgi/terminator/config
+mv ~/.config/terminator/terminator-config ~/.config/terminator/config

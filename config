@@ -225,7 +225,7 @@ bindsym XF86AudioPrev exec playerctl previous
 
 exec discord
 exec firefox
-exec compton
+exec_always  compton
 
 exec_always feh --bg-scale ~/Pictures/bear.jpg
 
