@@ -21,7 +21,7 @@ if [ -f "$TERM" ]; then
 	echo "$TERM" exists.
 else
 	echo mkdir "$TERM"
-	mkdir "$I3"
+	mkdir "$TERM"
 fi
 
 
