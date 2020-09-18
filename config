@@ -30,7 +30,7 @@ font pango:System San Francisco Display 9
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec terminator 
+bindsym $mod+Return exec i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -227,7 +227,7 @@ exec discord
 exec firefox
 exec compton
 
-exec_always feh --bg-scale /home/abel/Pictures/bear.jpg
+exec_always feh --bg-scale ~/Pictures/bear.jpg
 
 for_window[class="SFML drawing"] floating enable
 
