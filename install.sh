@@ -10,20 +10,11 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 I3=~/.config/i3
 TERM=~/.config/terminator
 
-if [ -f "$I3" ]; then
-	echo "$I3" exists
-else 
-	echo mkdir "$I3"
-	mkdir "$I3"
-fi
-
-if [ -f "$TERM" ]; then
-	echo "$TERM" exists.
-else
-	echo mkdir "$TERM"
-	mkdir "$TERM"
-fi
-
+echo mkdir "$I3"
+mkdir "$I3"
+	
+echo mkdir "$TERM"
+mkdir "$TERM"
 
 echo cp config ~/.config/i3
 cp config ~/.config/i3
