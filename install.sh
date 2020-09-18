@@ -7,6 +7,24 @@ sudo snap install discord
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+I3=~/.config/i3
+TERM=~/.config/terminator
+
+if [ -f "$I3" ]; then
+	echo "$I3" exists
+else 
+	echo mkdir "$I3"
+	mkdir "$I3"
+fi
+
+if [ -f "$TERM" ]; then
+	echo "$TERM" exists.
+else
+	echo mkdir "$TERM"
+	mkdir "$I3"
+fi
+
+
 echo cp config ~/.config/i3
 cp config ~/.config/i3
 echo cp vimrc ~
