@@ -4,6 +4,9 @@ sudo apt-get update && sudo apt-get upgrade && sudo apt-get install git && sudo 
 
 sudo snap install discord
 
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
 cp config ~/.config/i3
 cp vimrc ~
 mv ~/vimrc ~/.vimrc
