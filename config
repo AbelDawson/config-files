@@ -227,7 +227,7 @@ exec discord
 exec firefox
 exec compton
 
-exec_always feh --bg-scale /home/abel/Pictures/rocket.jpg
+exec_always feh --bg-scale /home/abel/Pictures/bear.jpg
 
 for_window[class="SFML drawing"] floating enable
 
