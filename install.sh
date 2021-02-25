@@ -6,8 +6,12 @@ sudo pacman -Syu git vim i3-wm i3status-rist rofi feh terminator picom
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+CONFIG=~/.config
 I3=~/.config/i3
 TERM=~/.config/terminator
+
+echo mkdir ".config"
+mkdir "CONFIG" 
 
 echo mkdir "$I3"
 mkdir "$I3"
