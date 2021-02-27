@@ -99,7 +99,7 @@ set $ws1 "1: Coding"
 set $ws2 "2: Firefox"
 set $ws3 "3: Secondary Browser"
 set $ws4 "4: Discord/Slack"
-set $ws5 "5"
+set $ws5 "5: Spotify"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
@@ -184,7 +184,9 @@ set $urgent-bg-color     #E53935
 hide_edge_borders both
 
 bar {
-    	status_command i3status
+    	#status_command i3status
+	position top
+    	status_command /bin/i3status-rs ~/.config/i3/status.toml
 	font pango:DejaVu Sans Mono, Awesome 10  
     	colors {
         	background #1E2127
@@ -214,8 +216,8 @@ bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 5%- #decreas
 bindsym XF86AudioMute exec --no-startup-id  amixer set Master 100% # mute sound
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
 
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play
@@ -225,9 +227,11 @@ bindsym XF86AudioPrev exec playerctl previous
 
 exec discord
 exec firefox
-exec_always  compton
+exec_always picom --config ~/.config/picom/picom.conf
+exec thunderbird
+exec flameshot &
 
-exec_always feh --bg-scale ~/Pictures/bear.jpg
+exec_always feh --bg-scale ~/Pictures/pink.jpg
 
 for_window[class="SFML drawing"] floating enable
 
