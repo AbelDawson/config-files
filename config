@@ -39,10 +39,13 @@ exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id  amixer set Master 5%+ && $refresh_i3status #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 5%- && $refresh_i3status #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id amixer set Master 1+ toggle && $refresh_i3status
+
+# set display brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id sudo xbacklight -inc 10 && $refresh_i3status
+bindsym XF86MonBrightnessDown exec --no-startup-id sudo xbacklight -dec 10 && $refresh_i3status
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -55,7 +58,7 @@ default_border none
 tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec terminator # urxvt
 
 # kill focused window
 bindsym $mod+Shift+q kill
